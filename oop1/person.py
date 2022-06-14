@@ -1,5 +1,7 @@
 class Person:
+    country = "Thailand" #class variable
     def __init__(self,name,gender,profession,study) -> None:
+        #instance  variables
         self.name = name
         self.gender = gender
         self.profession = profession
@@ -30,5 +32,20 @@ lalisa_obj = Person ("Lalisa","Female","Korean Singer",13)
 lalisa_obj.work()
 
 
+print(f"Class Variable: {Person.country}")
+print(f"Instance Variables: {lalisa_obj.country}")
+
+#assign value
+lalisa_obj.country = "Korea"
+print("-------")
+print(f"Class Variable: {Person.country}")
+print(f"Instance Variables: {lalisa_obj.country}")
+print(f"Instance Variables: {jon_obj.country}")
+
+# assign class variable
+Person.country = "England"
+print(f"Class Variable: {Person.country}")
+print(f"Instance Variables: {lalisa_obj.country}")
+print(f"Instance Variables: {jon_obj.country}")
 
 
